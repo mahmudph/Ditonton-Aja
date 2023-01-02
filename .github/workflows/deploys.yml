@@ -47,7 +47,7 @@ jobs:
         run: flutter pub get
 
       - name: bump flutter version
-        run: flutter pub run cider bump ${{ outputs.version }} --bump-build
+        run: flutter pub run cider bump ${{ version }} --bump-build
 
       - run: flutter build appbundle --release
       - run: flutter build apk --release
